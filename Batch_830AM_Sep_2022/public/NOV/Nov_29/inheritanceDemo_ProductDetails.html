@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+
+            class SellerDetails {
+                constructor(data) {
+                    this.sellerName = data.sname;
+                    this.sellerRating = data.rating;
+                    thi.sellerLocations = data.locations;
+                }
+                displaySellerDetails() {
+                    console.log("Sellername " + this.sellerName);
+                    console.log("Rating " + this.sellerRating);
+                }
+            }
+
+            class Product_Electrical extends SellerDetails {
+                constructor(data) {
+                    super({sname: data.sname, rating: data.rating});
+                    this.pname = data.name;
+                    this.discount = data.discount;
+                    this.productVolts = data.volts;
+                    this.image = data.image;
+                }
+                displayProductData() {
+                    console.log("Name is " + this.pname);
+                    console.log("Discount " + this.discount);
+                    console.log("Volts " + this.productVolts);
+                    console.log("Image " + this.image);
+                    this.displaySellerDetails();
+                    
+                }
+            }
+            var p1 = new Product_Electrical({name: 'Bulb', discount: 10, volts: '20V', image: 'bulb.png', sname: 'ABC Dealer', 'rating': '4.6', locations: ["Hyderabad", "Delhi", "Mumbai"]});
+            p1.displayProductData();
+
+            /*var p2 = new Product_Electrical({name: 'Fan', discount: 8, volts: '200V', image: 'fan.png', sname: 'ABC Dealer', 'rating': '4.6'});
+            p2.displayProductData(); */
+
+            class Product_Furniture extends SellerDetails {
+                constructor(data) {
+                    super({sname: data.sname, rating: data.rating});
+                    this.pname = data.name;
+                    this.discount = data.discount;
+                    this.productWarrenty = data.warrenty;
+                    this.image = data.image;
+                }
+                displayProductData() {
+                    console.log("Name is " + this.pname);
+                    console.log("Discount " + this.discount);
+                    console.log("Warrenty " + this.productWarrenty);
+                    console.log("Image " + this.image);
+                    this.displaySellerDetails();
+                }
+            }
+
+            var c1 = new Product_Furniture({name: 'Sofa', discount: 8, warrenty: '2 years', image: 'sofa.png', sname: 'ABC Dealer', 'rating': '4.6'});
+            c1.displayProductData();
+
+            
+            
+
+        </script>
+    </body>
+</html>

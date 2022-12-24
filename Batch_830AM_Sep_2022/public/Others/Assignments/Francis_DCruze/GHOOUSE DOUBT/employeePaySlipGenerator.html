@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payslipgenerator</title>
+    
+    <script src="emp1.js"></script>
+    <link rel="stylesheet" href="emp1.css">
+   
+</head>
+<body>
+    <div class="adil"> EMPLOYEE PAY  SLIP GENERATOR </div>
+    <ul class="EmpRead">
+        <li>
+        <div  class="textlabel">  EMPLOYEE NAME: </div>
+          <div class="controller "> <input type="text" id="ename" ><div>
+             </li>
+             <li class="textlabel">
+                <div class="textlabel" >EMPLOYEE DEPT :</div>
+                <div class="controller">
+                    <select name="" id="edept">
+                        <option value="IT">IT</option>;
+                        <option value="MECH">MECH</option>;
+                        <option value="HR">HR</option>;
+                        <option value="CIVIL">CIVIL</option>
+                    </select>
+                </div>
+                </li>
+                <li>
+                    <div  class="textlabel"> AGE : </div>
+                    <div  class="controller"> <input type="text" id="eage"></div>
+                </li>
+                <li>
+                    <div class="textlabel"> EMP BASICSALARY: </div>
+                    <div class="controller"> <input type="text" id="ebasicsalary"></div>
+                </li>
+                <li>
+                    <div class="ggg">
+                   <input type="button" value="Generate Payslip " onclick="generatepayslip()">
+                    </div>
+                </li>
+
+    </ul>
+    <div class="displaythis">
+        <div> EMPLOYEE NAME: <span id="d_name"></span></div>
+        <div> EMPLOYEE AGE: <span id="d_age"></span></div>
+        <div> EMPLOYEE BASICSALRY: <span id="d_basicsalary"></span></div>
+        <div> EMPLOYEE TOTALSALARY: <span id="d_totalsalary"></span></div>
+        <div> EMPLOYEE PF : <span id="d_pf"></span></div>
+        <div>EMPLOYEE HRA : <span id="d_hra"></span></div>
+        <div> EMPLOYEE TAXTOBE PAID: <span id="d_tax"></span></div>
+    </div>
+</body>
+</html>

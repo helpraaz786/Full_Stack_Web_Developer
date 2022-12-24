@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Demonstrating Closures
+        </title>
+    </head>
+    <body>
+        <script>
+           /* function showData() {
+                var a = 90;
+                var b = 99;
+                var c =  a + b;
+                console.log("result " + c);
+            }
+
+            showData(); */
+
+
+            (() => {
+                var a = 90;
+                var b = 99;
+                var c =  a + b;
+                console.log("result " + c);
+                console.log("Value of a is " + a)
+
+                function sample() {
+                    console.log("am from sample");
+                }
+
+                var showdata = () => {
+
+                }
+                sample();
+
+                var data = {
+                    name: 'prasad'
+                }
+                console.log(data);
+
+                class Sample {
+
+                }
+            })();
+            // console.log("Value of a is " + a)
+            // sample();
+            console.log(data);
+
+
+        </script>
+    </body>
+</html>

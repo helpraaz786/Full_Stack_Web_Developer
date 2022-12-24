@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tambola Game</title>
+        <style>
+            #gameouter {
+                margin: 2px;
+                padding: 2px;
+                border: 2px solid blue;
+                width: 320px;
+                height: 475px;
+            }
+            #gameoptions {
+                margin: 2px;
+                padding: 2px;
+                border: 2px solid brown;
+                width: auto;
+                height: 35px;
+            }
+            #options {
+                margin: 4px;
+                padding: 2px;
+                background-color: aqua;
+                border: 2px solid rgb(177, 232, 90);
+                width: 45px ;
+                height: 20px;
+                float: left;
+                text-align: center;
+            }
+            .numcontainer {
+                margin: 2px;
+                margin-top: 10px;
+                margin-left: 10px;
+                padding: 2px;
+                border: 2px solid seagreen;
+                width: 180px;
+                height: 20px;
+                float: left;
+                text-align: center;
+                background-color: rgba(0, 0, 255, 0.393);
+                color: rgba(255, 0, 0);
+            }
+            .butn {
+                margin-top: 14px;
+                margin-left: 25px;
+            }
+            #numcontainer {
+                margin: 10px;
+                margin-top: 15px;
+                padding: 2px;
+                border: 2px solid;
+                height: 352px;
+                width: auto;
+            }
+            #numcontainer div {
+                margin: 2px;
+                padding: 2px;
+                border: 2px solid black;
+                height: 20px;
+                width: 20px;
+                text-align: center;
+                float: left;
+            }
+            .numbermatch {
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="gameouter">
+            <div id="gameoptions">
+                <div id="options"> Play </div>
+                <div id="options"> Pause </div>
+                <div id="options"> Music </div>
+                <div id="options"> Mute </div>
+                <div id="options"> Setting </div>
+            </div>
+            <div id="randomnumber">
+                <div>
+                    <input type="button" value="GetNumber" class="butn" onclick="randomnumb()" >
+                    <div class="numcontainer">
+                        <div class="displayrandomnum"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="numcontainer">
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        for (var i = 1 ; i <= 99 ; i++) {
+            var numbers = document.createElement("div");
+            numbers.setAttribute('class', 'tambolanum');
+            numbers.setAttribute('id', "id_" + i);
+            numbers.innerHTML = i;
+            document.querySelector('#numcontainer').append(numbers);
+        }
+
+        var randomnumb = () => {
+            var randomnum = Math.round(Math.random() * 99);
+            var id = '#id_' + randomnum;
+            document.querySelector('.displayrandomnum').innerHTML = randomnum;
+            document.querySelector(id).style.backgroundColor = 'blue';
+        }
+
+/*        if (randomnum == numbers) {
+            document.querySelector(document.setAttribute('class' , 'numbermatch'));
+        }
+
+        var randomfunction = () = {
+            random = getrandomnum() ; 
+            document.querySelector('.numcontainer').innerHTML = randomnum;
+        }
+        var getrandomnum = () => {
+            var randomnum = Math.round(Math.random() * 96);
+            return randomnum;
+        }
+
+        randomfunction();*/
+        
+    </script>
+</html>

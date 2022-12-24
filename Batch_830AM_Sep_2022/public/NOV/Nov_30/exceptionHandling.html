@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Demonstrating Exception handling
+        </title>
+    </head>
+    <body>
+        <script>
+            console.log("Starting")
+            var a = 90;
+            
+            if (a == 90) {
+                console.log("Its Passed");
+            } else {
+                console.log("Its failed");
+            }
+            try {
+                console.log("try start")
+                console.log("value of b is " + b);
+                console.log('within try block');
+            } catch(error) {
+                console.log(error);
+                console.log("error got raised");
+            }
+            console.log("End")
+        </script>
+    </body>
+</html>

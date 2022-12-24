@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Demonstrating JWT
+        </title>
+        <script src="javascript/lib/jquery.js"></script>
+    </head>
+    <body>
+        <!-- <input type="button" value="Generate Token" onclick="generateToken()"> -->
+        <input type="button" value="Get Product Details" onclick="getproductDetails()">
+        <script>
+            var publicToken = "This is my secret Token";
+
+            var getproductDetails = () => {
+                $.ajax({
+                    url: '/get/productDetails',
+                    method: 'POST',
+                    dataType: 'JSON',
+                    headers: {
+                        token: receviedToken
+                    },
+                    data: {},
+                    success: (response) => {
+                        console.log(response);
+                    }
+                })
+            }
+            var receviedToken = '';
+            var generateToken = () => {
+                $.ajax({
+                    url: '/new/generateToken',
+                    headers: {
+                        secretToken: publicToken
+                    },
+                    data: {
+                        userId: 'user_prasad',
+                        time: Date()
+                    },
+                    method: 'POST',
+                    dataType: 'JSON',
+                    success: (response) => {
+                        console.log("Response");
+                        receviedToken = response.token;
+                    }
+                });
+            }
+
+            generateToken();
+        </script>
+    </body>
+</html>

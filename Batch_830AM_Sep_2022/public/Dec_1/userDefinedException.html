@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Demonstrating User defined exceptions...
+        </title>
+        <style>
+            ul {
+                border: 1px solid;
+                width: 500px;
+                margin: 30px auto;
+                padding: 10px;
+                background-color: #ccc;
+            }
+            li {
+                list-style: none;
+                padding: 10px;
+                margin: 10px;
+                background-color: #fff;
+            }
+            .error {
+                color: red;
+                display: none;
+                font-size: 10px;
+
+            }
+        </style>
+        <script src="dataValidation.js"></script>
+    </head>
+    <body>
+        <ul>
+            <li>
+                User Name: <input type="text" id="uname">
+                <div class="error nameErr">Name is mandate</div>
+            </li>
+            <li>
+                Age: <input type="text" id="uage">
+                <div class="error ageErr">Age Should be >= 21</div>
+            </li>
+            <li>
+                Gender:
+                <input type="radio" name="gender" checked value="Male">Male
+                <input type="radio" name="gender" value="Female">Female
+            </li>
+            <li>
+                <input type="button" value="SaveDetails" onclick="saveDetails()">
+            </li>
+        </ul>
+    </body>
+</html>

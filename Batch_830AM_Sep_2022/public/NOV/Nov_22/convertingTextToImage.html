@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/text-image/dist/text-image.js"></script>
+    </head>
+    <body>
+        <div></div>
+        <script>
+             var style = {
+                font: 'serif',
+                align: 'center',
+                color: 'green',
+                size: 18,
+                background: 'white',
+                stroke: 1,
+                strokeColor: 'rgba(0, 0, 0, 1)'
+            };
+            var textImage1 = TextImage(style);
+            var img = textImage1.toImage("PRASAD");
+
+            console.log(img);
+            document.querySelector('div').append(img);
+        </script>
+    </body>
+</html>

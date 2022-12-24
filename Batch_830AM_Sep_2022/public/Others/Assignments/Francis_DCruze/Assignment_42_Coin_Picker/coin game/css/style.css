@@ -1,0 +1,323 @@
+/*///////////////////////HEADER AND SWITCHES///////////////*/
+.container {
+    width: 400px;
+    height: 600px;
+    border: 2px solid;
+    margin: 0 auto;
+    padding: 0 10px;
+    background: #401a16;
+}
+
+h5 {
+    border: 2px solid;
+    margin: 3px 0;
+    text-align: center;
+    border-radius: 34%;
+    background-color: antiquewhite;
+}
+
+.header {
+    margin-top: 0;
+    border: 2px solid;
+    background-color: white;
+    border-radius: 34px;
+    height: 44px;
+}
+
+.header ul {
+    /* border: 2px solid red; */
+    padding: 0 3px;
+    margin-top: 0;
+
+}
+
+.header ul li {
+    display: inline-block;
+    width: auto;
+    /* border: 2px solid; */
+    padding: 8px;
+    margin: 0px 4px;
+}
+
+.header ul li .switch {
+    display: inline-block;
+    width: 55px;
+    height: 32px;
+    /* border: 2px solid; */
+    border-radius: 30px;
+    background-color: rgb(164, 213, 164);
+    box-shadow: -2px 3px 4px green inset;
+}
+
+.header ul li .switch .btn {
+    width: 30px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid rgb(12, 241, 12);
+    background-color: white;
+    box-shadow: 1px 0px 2px green;
+    position: relative;
+}
+
+/*///////////////////////DISPLAY///////////////////////////////*/
+
+.display {
+    width: auto;
+    height: 150px;
+    background-color: white;
+    border-radius: 12px;
+    margin: 5px auto;
+    padding: 8px;
+}
+
+.display-header {
+    width: auto;
+    height: 50px;
+
+}
+
+.display-header .previous {
+    width: 60px;
+    height: 55px;
+    text-align: center;
+    float: left;
+    margin: 3px auto;
+}
+
+.display-header .previous span {
+    display: inline-block;
+    margin: auto;
+}
+
+.display-header .previous .PrevNumber {
+    font-size: 26px;
+}
+
+.display-header .list {
+    width: 60px;
+    float: right;
+    text-align: center;
+    position: relative;
+    top: 34px;
+    color: rgb(20, 116, 196);
+    font-weight: 600;
+}
+
+.current {
+    height: 62px;
+    width: auto;
+}
+
+.current .left {
+    width: 50%;
+    height: 60px;
+    float: left;
+}
+
+.current .right {
+    width: 30%;
+    height: 60px;
+    float: right;
+    text-align: center;
+}
+
+.current .dispalyCurrent {
+    height: 72px;
+width: 66%;
+float: right;
+margin: -10px auto;
+}
+
+.current .dispalyCurrent span {
+    display: inline-block;
+    width: 86%;
+    text-align: center;
+}
+
+.CurrentNumber {
+    font-size: 42px;
+    font-weight: bolder;
+    color: blue;
+    height: 38px;
+}
+
+.startButton {
+    font-size: 15px;
+    color: black;
+    margin: 5px 0;
+    cursor: pointer;
+    height: 17px;
+border-radius: 14px;
+background: red;
+}
+
+.startButton:hover
+{
+box-shadow: 1px 2px 3px black;
+
+}
+
+.current .right i {
+    text-align: center;
+    font-size: 40px;
+    margin: 20px 70px;
+}
+
+.display-footer {
+    width: auto;
+    height: 44px;
+    margin: 0px 0;
+}
+
+.display-footer .timerdisplay {
+    float: left;
+    width: 163px;
+    height: 20px;
+    font-size: 18px;
+    text-align: center;
+    margin: 18px 6px 0 0;
+}
+
+.timerdisplay .timer {
+    margin: 0 20px;
+}
+
+.display-footer div {
+    float: left;
+    margin: 8px 0 0 0;
+}
+
+.timerbtnplus,
+.timerbtnminus {
+    width: 50px;
+    border: 2px solid;
+    height: 28px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 2px 0;
+    color: rgb(20, 116, 196);
+    cursor: pointer;
+}
+
+.timerbtnminus:hover,
+.timerbtnplus:hover {
+    width: 60px;
+    height: 32px;
+    text-align: center;
+    font-size: 27px;
+    position: relative;
+    bottom: 2px;
+}
+
+.timerbtnminus {
+    border-radius: 8px 0 0 8px;
+}
+
+.timerbtnplus {
+    border-radius: 0 8px 8px 0;
+}
+
+/*///////////////////////////////NUMBER BODY/////////////////////////*/
+
+.main-container
+{
+    width: 100%;
+    height: 345px;
+    margin: 5px auto;
+    background-color: bisque;
+}
+
+.main
+{
+    width: auto;
+height: 345px;
+/* border: 5px solid greenyellow; */
+    margin: auto;
+}
+.main .numbers {
+    float: left;
+width: auto;
+height: 30px;
+border: 2px solid;
+text-align: center;
+font-size: 26px;
+margin: 2px 2px;
+background-color: white;
+padding: 0px 3px;
+}
+
+/*/////////////////////////@media/////////////////////////*/
+@media only screen and (max-width: 430px) 
+{
+    .container
+    {
+        width: auto;
+        margin: auto;
+    }
+
+    .header ul li
+    {
+        padding: 0px;
+        margin: 9px 3px;    
+    }
+
+    .header ul li .switch
+    {
+        width: 38px;
+height: 25px;
+    }
+
+    .header ul li .switch .btn {
+        width: 19px;
+        height: 18px;
+        margin: 2px 0px;
+}
+
+.current
+{
+    border: 2px solid white;
+}
+.current .right i {
+    font-size: 30px;
+    margin: 25px 50px;
+}
+.timerbtnplus, .timerbtnminus {
+    width: 43px;
+    height: 25px;
+    font-size: 19px;
+}
+
+.main .numbers {
+    width: auto;;
+    height: 25px;
+    font-size: 19px;
+    margin: 2px auto;
+border-radius: 9px;
+padding: 0 3px;
+}
+}
+
+@media only screen and (min-width: 351px) and (max-width: 390px)
+{
+    .main .numbers {
+        width: auto;
+height: 26px;
+font-size: 20px;
+margin: 2px 3px;
+border-radius: 6px;
+padding: 0 2px;
+    }
+}
+
+@media only screen and (min-width: 391px) and (max-width: 429px)
+{
+    .main .numbers {
+        width: auto;
+height: 26px;
+font-size: 21px;
+margin: 2px 3px;
+border-radius: 6px;
+padding: 0 4px;
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Dynamic Event Handling
+        </title>
+    </head>
+    <body>
+        Action type:
+        <select id="userOption" onchange="actionChanged()" name="sample">
+            
+            <option> click</option>
+            <option> mouseover</option>
+        </select>
+        <div id="container" >My content</div>
+        <script>
+            var actionChanged = () => {
+                console.log(document.querySelector("#userOption").getAttribute('name'))
+                var actionSelected = document.querySelector("#userOption").value;
+                document.querySelector("#container").addEventListener(actionSelected, () => {
+                    showMsg();
+                });
+            }
+
+           
+            var showMsg = () => {
+                alert("click happend");
+            }
+            
+        </script>
+
+    </body>
+</html>

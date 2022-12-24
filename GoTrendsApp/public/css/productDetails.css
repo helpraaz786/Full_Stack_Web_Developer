@@ -1,0 +1,15 @@
+.card{
+    width: 15rem;
+    cursor: pointer;
+}
+
+.logoutButton {
+    color: #fff;
+    cursor: pointer;
+    display: none;
+
+}
+
+.logoutButton:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,14 @@
+ul {
+    border: 2px solid;
+    margin: 40px auto;
+    padding: 20px;
+    width: 500px;
+    background-color: #ddd;
+}
+li {
+    list-style: none;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5px;
+    background-color: #fff;
+}

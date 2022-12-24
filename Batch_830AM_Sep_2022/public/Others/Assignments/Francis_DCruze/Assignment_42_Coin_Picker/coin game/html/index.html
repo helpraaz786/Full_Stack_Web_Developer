@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+        
+        <title>Coin Picker</title>
+    </head>
+    <body>
+        <div class="container">
+            <h5>NUMBER PICKER</h5>
+            <div class="header">
+                <ul>
+                    <li>Board: <span class="switch"><div class="btn" id="background"></div></span></li>
+                    <li>Sound: <span class="switch"><div class="btn" id="sound"></div></span></li>
+                    <li>Auto: <span class="switch"><div class="btn" id="autostart"></div></span></li>
+                </ul>
+            </div>
+
+            <div class="display">
+                <div class="display-header">
+                    <div class="previous">
+                        <span>Prev No.</span><span class="PrevNumber"></span>
+                    </div>
+                    <div class="list">List</div>
+                </div>
+                <div class="current">
+                    <div class="left">
+                        <div class="dispalyCurrent">
+                            <span class="CurrentNumber"></span>
+                            <span class="startButton">Click to Start</span>
+                        </div>
+                    </div>
+                    <div class="right"><i class="fa-solid fa-rotate-right" id="refresh"></i></div>
+                </div>
+                <div class="display-footer">
+                    <div class="timerdisplay">Delay:- <span class="timer">0.5</span>Sec</div>
+                    <div class="timerbtnminus">-</div>
+                    <div class="timerbtnplus">+</div>
+                </div>
+            </div>
+            <div class="main-container">
+                <div class="main">
+                    <!-- <div class="numbers num1" id="nm1" style="background: green;">01</div> -->
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="../js/InsertNumber.js"></script>
+    <script src="../js/MyProgram.js"></script>
+</html>

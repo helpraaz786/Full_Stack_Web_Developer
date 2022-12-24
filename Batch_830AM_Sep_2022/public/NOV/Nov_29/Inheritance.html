@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            class One { // Base class / Parent class
+                constructor(c1, c2) {
+                    console.log("From class 1 constructor");
+                    this.a = 90;
+                }
+                sample() {
+
+                }
+            }
+            class Two extends One { // Derived class / Child class
+                constructor(name, age, gender) {
+                    super(100, 200); // indirectly equal to invoking the constructor of parent class at line 12
+                    this.b = 99;
+                    this.a = 100;
+                    console.log("From class 2 constructor");
+                }
+                displayData() {
+                    console.log("Value of b is " + this.b);
+                    console.log("Value of a is " + this.a);
+                    this.sample();
+                }
+            }
+
+            var p1 = new Two("raj", 20, "Male"); 
+            p1.displayData();
+
+            var p2 = new One(500, 600);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/text-image/dist/text-image.js"></script>
+    </head>
+    <body>
+        <input type="button" value="Generate Captcha" onclick="generateCaptcha()">
+        <div id="cImage"></div>
+        <div id="capchaText">...</div>
+        <input type="text">
+        <script>
+            var style = {
+                font: 'serif',
+                align: 'center',
+                color: 'green',
+                size: 18,
+                background: 'white',
+                stroke: 1,
+                strokeColor: 'rgba(0, 0, 0, 1)'
+            };
+            var textImage1 = TextImage(style);
+            var lowerCaseChar = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+            var upperCaseChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+            var generateCaptcha = () => {
+                var captchaText = getRandomeUpperCaseCharecter() + 
+                                  getRandomNumber(9) + 
+                                  getRandomeLowerCaseCharecter() + 
+                                  getRandomNumber(9) + 
+                                  getRandomeUpperCaseCharecter();
+
+                //document.querySelector("#capchaText").innerHTML = captchaText;
+                var img = textImage1.toImage(captchaText);
+                document.querySelector("#cImage").innerHTML = '';
+                document.querySelector("#cImage").append(img);
+            }
+
+            var getRandomNumber = (maxValue) => {
+                var randomNumber = Math.round(Math.random() * maxValue);
+                return randomNumber;
+            }
+
+
+            var getRandomeLowerCaseCharecter = () => {
+                var randomIndex = getRandomNumber(lowerCaseChar.length);
+                return lowerCaseChar[randomIndex];
+            }
+
+            var getRandomeUpperCaseCharecter = () => {
+                var randomIndex = getRandomNumber(upperCaseChar.length);
+                return upperCaseChar[randomIndex];
+            }
+
+            getRandomeUpperCaseCharecter();
+            
+
+            
+            
+        </script>
+    </body>
+</html>

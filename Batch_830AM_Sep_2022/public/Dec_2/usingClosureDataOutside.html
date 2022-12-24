@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Demonstarting steps to be followed to access closure data outside of closure.
+        </title>
+    </head>
+    <body>
+        <script>
+            var myData = (() => {
+                var count = 90;
+                var basicSal = 10000;
+                
+                var getHra = () => {
+                    var hra = (basicSal * 24) / 100;
+                    return hra;
+                }
+
+                return {
+                    bsal: basicSal,
+                    getEmpHra() {
+                        return getHra();
+                    },
+                    getPf() {
+                        var pf = (basicSal * 12) / 100;
+                        return pf;
+                    }
+                };
+                
+            })();
+            console.log(myData.bsal);
+            console.log(myData.getEmpHra());
+            console.log(myData.getPf());
+        </script>
+    </body>
+</html>

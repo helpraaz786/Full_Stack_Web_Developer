@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=sc, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var data1 = {
+            name: 'Teena',
+            age: 20,
+            displayDetails() {
+                console.log("hello rom ddisplay details");
+            },
+            showData() {
+                console.log("sample from show data");
+            }
+        };
+        var data2 = {
+            name: 'Krish',
+            age: 10,
+            displayDetails() {
+                console.log("hello rom ddisplay details");
+            },
+            showData() {
+                console.log("sample from show data");
+            }
+        };
+        data1.displayDetails();
+
+   /*********************/
+        class Sample {
+            constructor(data) { // MEthod which gets invoked automatically while we instantiate object
+                console.log("am frm constructor");
+                this.name = data.name;
+                this.age = data.uage;
+            }
+            displayDetails() {
+                console.log("hello rom ddisplay details");
+            }
+            showData() {
+                console.log("sample from show data");
+            }
+        }
+
+        var p1 = new Sample({name: "RAj", uage: 20}); // Creating Object/instace of 'Sample' class
+        p1.displayDetails();
+        var p2 = new Sample({name: "Suresh", uage: 24});
+        var p4 = new Sample({name: "KRish", uage: 23});
+
+        console.log(p1);
+        console.log(p2);
+        console.log(p4);
+
+
+    </script>
+</body>
+</html>
